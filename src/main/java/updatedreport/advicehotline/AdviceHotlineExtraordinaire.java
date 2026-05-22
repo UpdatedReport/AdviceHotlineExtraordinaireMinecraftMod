@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import updatedreport.advicehotline.block.AdviceHotlineBlock;
 import updatedreport.advicehotline.item.AdviceHotlineItem;
 
 public class AdviceHotlineExtraordinaire implements ModInitializer {
@@ -14,6 +15,7 @@ public class AdviceHotlineExtraordinaire implements ModInitializer {
 	@Override
 	public void onInitialize() {
         AdviceHotlineItem.registerModItems();
+        AdviceHotlineBlock.registerModBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
