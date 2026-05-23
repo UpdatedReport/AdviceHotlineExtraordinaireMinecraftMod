@@ -13,13 +13,14 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import updatedreport.advicehotline.AdviceHotlineExtraordinaire;
+import updatedreport.advicehotline.block.custom.AdviceHotlineEverythingManTelephoneBlock;
 
 import java.util.function.Function;
 
 public class AdviceHotlineBlock {
 
     public static final Block EVERYTHING_MAN_TELEPHONE = registerBlock("everything_man_telephone",
-            properties -> new Block(properties.strength(20f)
+            properties -> new AdviceHotlineEverythingManTelephoneBlock(properties.strength(20f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.IRON)));
 
