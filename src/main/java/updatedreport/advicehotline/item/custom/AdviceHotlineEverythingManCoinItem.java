@@ -82,7 +82,7 @@ public class AdviceHotlineEverythingManCoinItem extends Item {
                 structPos = serverLevel.findNearestMapStructure(
                         StructureTags.VILLAGE,
                         player.blockPosition(),
-                        1000,
+                        10000,
                         false
                 );
                 structType = 3;
@@ -92,7 +92,7 @@ public class AdviceHotlineEverythingManCoinItem extends Item {
                 structPos = serverLevel.findNearestMapStructure(
                         StructureTags.SHIPWRECK,
                         player.blockPosition(),
-                        2000,
+                        10000,
                         false
                 );
                 structType = 4;
@@ -112,18 +112,36 @@ public class AdviceHotlineEverythingManCoinItem extends Item {
                 structPos = serverLevel.findNearestMapStructure(
                         StructureTags.ON_TREASURE_MAPS,
                         player.blockPosition(),
-                        2000,
+                        10000,
                         false
                 );
                 structType = 6;
             }
 
-            Component message;
+            Component message = Component.literal("This message should not appear.");
 
             if (structPos != null) {
 
-                message = Component.literal("<The Everything Man> Yoooo look at this.")
-                        .withStyle(ChatFormatting.WHITE);
+                switch (structType){
+
+                    case 1 -> message = Component.literal("<The Everything Man> There's nothing interesting nearby...")
+                            .withStyle(ChatFormatting.WHITE);
+
+                    case 2 -> message = Component.literal("<The Everything Man> You want to go somewhere fun?")
+                            .withStyle(ChatFormatting.WHITE);
+
+                    case 3 -> message = Component.literal("<The Everything Man> I believe you can find a village here...")
+                            .withStyle(ChatFormatting.WHITE);
+
+                    case 4 -> message = Component.literal("<The Everything Man> A ship went down over here...")
+                            .withStyle(ChatFormatting.WHITE);
+
+                    case 5 -> message = Component.literal("<The Everything Man> The Ender Dragon is hidden away here...")
+                            .withStyle(ChatFormatting.WHITE);
+
+                    case 6 -> message = Component.literal("<The Everything Man> There's a lot of treasure here...")
+                            .withStyle(ChatFormatting.WHITE);
+                }
 
                 player.sendSystemMessage(message);
 
@@ -132,7 +150,7 @@ public class AdviceHotlineEverythingManCoinItem extends Item {
                 ItemStack map = MapItem.create(
                         serverLevel,
                         structPos.getX(),
-                        structPos.getY(),
+                        structPos.getZ(),
                         (byte) 2,
                         true,
                         true
