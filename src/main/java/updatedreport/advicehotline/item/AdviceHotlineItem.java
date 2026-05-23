@@ -9,11 +9,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import updatedreport.advicehotline.AdviceHotlineExtraordinaire;
+import updatedreport.advicehotline.item.custom.AdviceHotlineEverythingManCoinItem;
 
 import java.util.function.Function;
 
 public class AdviceHotlineItem {
-    public static final Item EVERYTHING_MAN_COIN = registerItem("everything_man_coin", Item::new);
+    public static final Item EVERYTHING_MAN_COIN = registerItem("everything_man_coin", AdviceHotlineEverythingManCoinItem::new);
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
