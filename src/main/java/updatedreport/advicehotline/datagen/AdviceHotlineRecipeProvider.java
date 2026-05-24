@@ -40,11 +40,11 @@ public class AdviceHotlineRecipeProvider extends FabricRecipeProvider {
                 oreBlasting(ADVICE_HOTLINE_COIN_SMELTING, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.IRON_NUGGET, 100,100, "coin");
 
                 shaped(RecipeCategory.MISC, AdviceHotlineBlock.EVERYTHING_MAN_TELEPHONE)
-                        .pattern("INI")
-                        .pattern("IRI")
-                        .pattern("III")
-                        .define('N', Items.NETHERITE_INGOT)
-                        .define('I', Items.IRON_BLOCK)
+                        .pattern("ICI")
+                        .pattern("CRC")
+                        .pattern("ICI")
+                        .define('C', Items.COPPER_BLOCK)
+                        .define('I', Items.IRON_INGOT)
                         .define('R', Items.REDSTONE_BLOCK)
                         .unlockedBy(getHasName(AdviceHotlineItem.EVERYTHING_MAN_COIN), has(AdviceHotlineItem.EVERYTHING_MAN_COIN))
                         .save(recipeOutput);
@@ -52,7 +52,7 @@ public class AdviceHotlineRecipeProvider extends FabricRecipeProvider {
                 shapeless(RecipeCategory.MISC, AdviceHotlineItem.EVERYTHING_MAN_COIN)
                         .requires(Items.IRON_INGOT)
                         .requires(Items.EMERALD)
-                        .unlockedBy(getHasName((Items.IRON_ORE)), has(Items.IRON_ORE))
+                        .unlockedBy(getHasName((Items.IRON_INGOT)), has(Items.IRON_INGOT))
                         .save(recipeOutput);
 
             }
