@@ -170,7 +170,13 @@ public class AdviceHotlineEverythingManCoinItem extends Item {
                         (Component.literal("The Everything Man's Directions"))
                 );
 
+                //Give the map
                 player.addItem(map);
+
+                //Delete the coin
+                ItemStack stack = context.getItemInHand();
+                stack.shrink(1);
+
             }
 
         }
