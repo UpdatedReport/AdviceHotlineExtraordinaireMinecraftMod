@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "advicehotline:block/everything_man_telephone" },
+    "facing=east":  { "model": "advicehotline:block/everything_man_telephone", "y": 90 },
+    "facing=south": { "model": "advicehotline:block/everything_man_telephone", "y": 180 },
+    "facing=west":  { "model": "advicehotline:block/everything_man_telephone", "y": 270 }
+  }
+}

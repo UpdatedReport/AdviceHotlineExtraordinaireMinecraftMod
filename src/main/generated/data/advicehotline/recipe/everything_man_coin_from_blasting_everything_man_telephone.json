@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 25.0,
+  "group": "telephone",
+  "ingredient": "advicehotline:everything_man_telephone",
+  "result": {
+    "id": "advicehotline:everything_man_coin"
+  }
+}

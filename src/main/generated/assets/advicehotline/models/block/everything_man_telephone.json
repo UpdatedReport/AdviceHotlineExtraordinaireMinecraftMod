@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "advicehotline:block/everything_man_telephone_front",
+    "side": "advicehotline:block/everything_man_telephone_side",
+    "top": "advicehotline:block/everything_man_telephone_top"
+  }
+}
